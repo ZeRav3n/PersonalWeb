@@ -1,54 +1,27 @@
-.App {
-  text-align: center;
-}
 body {
+  font-size: 16px; /* Adding this to set a base font-size */
   background-color: #000; /* Black */
   color: #fff; /* White */
 }
-media (min-width: 768px){
-  .project-card{
-    width: calc(50% - 20px);
-  }
+
+.App {
+  text-align: center;
 }
-@media(min-width: 1024px){
-  .project-card{
-    width: calc(33% - 20px);
-  }
-}
-@media(min-width: 1200px){
-  .project-card{
-    width: calc(25% - 20px);
-  }
-}
-@media(min-width: 1400px){
-  .project-card{
-    width: calc(20% - 20px);
-  }
-}
-@media(min-width: 1600px){
-  .project-card{
-    width: calc(16.666% - 20px);
-  }
-}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Making .App-header responsive by using vw instead of vh for min-height */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1em + 2vmin);
   color: white;
 }
 
@@ -56,27 +29,18 @@ media (min-width: 768px){
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Making the .section responsive by using % instead of px for padding */
 .section {
-  padding: 20px;
+  padding: 2%;
   border-bottom: 1px solid #ccc;
 }
 
 .section h1 {
   font-size: 1.5em;
 }
+
 .about {
-  padding: 50px;
-  p {
-    text-align: justify;
-  }
+  padding: 5%;  /* Using % instead of px for padding */
 }
 
 .about h1 {
@@ -87,67 +51,82 @@ media (min-width: 768px){
 .about p {
   font-size: 1.2em;
   line-height: 1.5;
+  text-align: justify;
 }
-.intro{
-  padding: 50px;
+
+.intro {
+  padding: 5%;  /* Using % instead of px for padding */
   font-size: 5em;
   text-align: center;
 }
+
 .portfolio {
-  padding: 50px;
+  padding: 5%;  /* Using % instead of px for padding */
 }
+
 .portfolio h1 {
   font-size: 2em;
   margin-bottom: 20px;
 }
-/* .portfolio .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.project {
-  width: 30%;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  color: #000;
-  text-decoration: none;
-}
-.project:hover {
-  background-color: #ccc;
-}
-.project h2 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
-}
-.project p {
-  font-size: 1.2em;
-  line-height: 1.5;
-} */
+
 .portfolio p {
   font-size: 1.2em;
   line-height: 1.5;
 }
+
+/* Making .project-grid responsive by using % for padding and removing margin */
 .project-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 2%;  /* Using % for padding */
+  box-sizing: border-box; /* To include padding and border in element's total width and height */
 }
 
 .project-card {
   position: relative;
-  width: 300px;
-  margin-bottom: 20px;
-  padding: 10px;
+  width: 90%; /* Adjusted for smaller screens */
+  margin: 5% auto; /* Adding auto for center alignment */
+  padding: 2%; /* Using % for padding */
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   overflow: hidden;
-  transition: transform 0.3s; /* This line added */
+  transition: transform 0.3s;
+}
+
+/* Adjust the width of project-card on larger screens */
+@media(min-width: 768px) {
+  .project-card {
+    width: calc(45% - 4%);  /* Adjusted % to account for padding */
+  }
+}
+
+@media(min-width: 1024px) {
+  .project-card {
+    width: calc(30% - 4%);
+  }
+}
+
+@media(min-width: 1200px) {
+  .project-card {
+    width: calc(22% - 4%);
+  }
+}
+
+@media(min-width: 1400px) {
+  .project-card {
+    width: calc(18% - 4%);
+  }
+}
+
+@media(min-width: 1600px) {
+  .project-card {
+    width: calc(15% - 4%);
+  }
 }
 
 .project-card:hover {
-  transform: scale(1.2); /* This line added */
+  transform: scale(1.1);
 }
 
 .project-background {
@@ -165,30 +144,34 @@ media (min-width: 768px){
 .project-content {
   position: relative;
   z-index: 2;
-  display: flex;  /* Flexbox */
+  display: flex; 
   flex-direction: column;
+  justify-content: space-between; /* To distribute space evenly */
 }
+
 .project-links {
   display: flex;
   justify-content: space-between;
 }
 
 .project-card img {
-  width: 100%;
+  max-width: 100%; /* Making image responsive */
   height: auto;
 }
 
 .project-card h2 {
-  margin-top: 10px;
+  font-size: 1.2em; /* Adjusted to be responsive */
+  margin-top: 1em; /* Changed from px to em */
 }
 
 .project-card p {
-  margin: 10px 0;
+  font-size: 1em; /* Adjusted to be responsive */
+  margin: 1em 0; /* Changed from px to em */
 }
 
 .project-card a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 1em; /* Changed from px to em */
   text-decoration: none;
   color: #61dafb;
 }
