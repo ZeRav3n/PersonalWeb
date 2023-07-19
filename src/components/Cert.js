@@ -1,3 +1,5 @@
+import "../App.css"
+
 export default function Cert() {
     return (
       <div id="cert" className='section'>
