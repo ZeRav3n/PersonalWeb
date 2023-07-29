@@ -5,11 +5,11 @@ export default function Skills() {
       <div id="skills" className='section'>
         <h1>Test</h1>
         <ul>
-          <li>UI/UX Design</li>
-          <li>Web Design</li>
-          <li>Front end</li>
-          <li>Back end</li>
-          <li>Digital Design</li>
+          UI/UX Design
+          Web Design
+          Front end
+          Back end
+          Digital Design
         </ul>
       </div>
     );
