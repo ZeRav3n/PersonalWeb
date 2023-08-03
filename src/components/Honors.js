@@ -34,7 +34,9 @@ export default function Honors() {
               rel="noopener noreferrer"
               className="view-btn"
             >
+              <span>
               View Certificate
+              </span>
             </a>
           </div>
         ))}

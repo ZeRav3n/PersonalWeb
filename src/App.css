@@ -224,18 +224,61 @@ body {
   object-fit: cover;
 }
 .view-btn {
-  display: inline-block;
+  font-family: Manrope, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
   color: #fff;
-  background-color: #61dafb;
-  padding: 5px 10px;
   text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  overflow: hidden;
 }
-
-.view-btn:hover {
-  background-color: #4dc0e7;
+.view-btn:before, .view-btn:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 50%;
+  background: #61dafb;
+  transition: all 0.3s;
+}
+.view-btn:before {
+  top: 0;
+  left: 50%;
+}
+.view-btn:after {
+  bottom: 0;
+  right: 50%;
+}
+.view-btn:hover:before {
+  left: 0;
+}
+.view-btn:hover:after {
+  right: 0;
+}
+.view-btn span:before, .view-btn span:after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 2px;
+  background: #61dafb;
+  transition: all 0.3s;
+}
+.view-btn span:before {
+  top: 50%;
+  left: 0;
+}
+.view-btn span:after {
+  bottom: 50%;
+  right: 0;
+}
+.view-btn:hover span:before {
+  top: 0;
+}
+.view-btn:hover span:after {
+  bottom: 0;
 }
 .resume-container {
   width: 100%;

@@ -1,5 +1,4 @@
 import "../App.css"
-
 export default function Cert() {
   const resumeURL = process.env.PUBLIC_URL + '/assets/Ratin_Zaman_Resume_IT.pdf';
     return (
