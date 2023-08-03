@@ -4,7 +4,6 @@ import AOS from 'aos';
 import About from './components/About';
 import Skills from './components/Skills';
 import Honors from './components/Honors';
-import Cert from './components/Cert';
 import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
@@ -25,7 +24,6 @@ function App(){
       <Portfolio />
       <Skills />
       <Honors />
-      <Cert />
       <Contact />
       <Footer />
     </div>
