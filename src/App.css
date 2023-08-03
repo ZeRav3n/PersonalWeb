@@ -244,16 +244,70 @@ body {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
-.resumeLink{
+.resumeLink {
   font-family: Manrope, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  background-color: transparent;
   color: #fff;
   text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+  overflow: hidden;
 }
-.resumeLink:hover{
-  color: #61dafb;
+
+.resumeLink:before, .resumeLink:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 50%;
+  background: #61dafb;
+  transition: all 0.3s;
+}
+
+.resumeLink:before {
+  top: 0;
+  left: 50%;
+}
+
+.resumeLink:after {
+  bottom: 0;
+  right: 50%;
+}
+
+.resumeLink:hover:before {
+  left: 0;
+}
+
+.resumeLink:hover:after {
+  right: 0;
+}
+
+.resumeLink span:before, .resumeLink span:after {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 2px;
+  background: #61dafb;
+  transition: all 0.3s;
+}
+
+.resumeLink span:before {
+  top: 50%;
+  left: 0;
+}
+
+.resumeLink span:after {
+  bottom: 50%;
+  right: 0;
+}
+
+.resumeLink:hover span:before {
+  top: 0;
+}
+
+.resumeLink:hover span:after {
+  bottom: 0;
 }

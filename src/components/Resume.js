@@ -5,7 +5,7 @@ export default function Cert() {
     return (
       <div id="cert" className='section'>
         <a className="resumeLink" target="_blank"
-              rel="noopener noreferrer" href={resumeURL}>→ Download CV</a>
+              rel="noopener noreferrer" href={resumeURL}><span>→ Download CV</span></a>
       </div>
     );
 }
