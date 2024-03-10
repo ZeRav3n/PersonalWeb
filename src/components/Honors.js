@@ -16,6 +16,13 @@ export default function Honors() {
     },
     {
       title: "Dean's List",
+      date: "Winter 2022",
+      description:
+        "Awarded to students who have achieved a GPA of 3.5 or higher for the semester.",
+      imgSrc: Zaman_badgeW22,
+    },
+    {
+      title: "Dean's List",
       date: "Fall 2022",
       description:
         "Awarded to students who have achieved a GPA of 3.5 or higher for the semester.",
