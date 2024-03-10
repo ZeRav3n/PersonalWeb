@@ -1,6 +1,7 @@
 import "../App.css";
 import Zaman_badgeF22 from "../assets/Shahid Md Ratin Zaman_badgeF22.jpg";
 import Zaman_badgeW23 from "../assets/Shahid Md Ratin Zaman_badgeW23.jpg";
+import Zaman_badgeF23 from "../assets/Shahid Md Ratin Zaman_badgeF23.jpg";
 import Resume from "./Resume.js";
 export default function Honors() {
   const honors = [
@@ -17,6 +18,13 @@ export default function Honors() {
       description:
         "Awarded to students who have achieved a GPA of 3.5 or higher for the semester.",
       imgSrc: Zaman_badgeW23,
+    },
+    {
+      title: "Dean's List",
+      date: "Fall 2023",
+      description:
+        "Awarded to students who have achieved a GPA of 3.5 or higher for the semester.",
+      imgSrc: Zaman_badgeF23,
     },
   ];
   return (
