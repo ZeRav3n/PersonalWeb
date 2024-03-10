@@ -185,13 +185,13 @@ body {
   margin-bottom: 10px;
 }
 .honors-section {
-  padding: 50px;
+  padding: 20px;
 }
 
 .honors-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+  gap: 20px;
 }
 
 .honor-card {
@@ -228,6 +228,7 @@ body {
   font-family: Manrope, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+  margin-top: auto;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   color: #fff;
