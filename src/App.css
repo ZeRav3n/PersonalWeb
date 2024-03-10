@@ -185,13 +185,19 @@ body {
   margin-bottom: 10px;
 }
 .honors-section {
-  padding: 20px;
+  padding: 50px;
 }
 
 .honors-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.gridHonor{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+  gap: 20px;
 }
 
 .honor-card {
@@ -207,23 +213,15 @@ body {
   transform: scale(1.05);
 }
 
-.honors-description {
-  margin-bottom: 20px; /* Space between the description and the list */
+.honor-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .honor-description,
 .honor-date {
   margin-bottom: 10px; /* Consistent margin for all text */
   font-style: italic; /* Apply italic style to both */
-}
-
-.honor-title {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-.honor-description {
-  margin-bottom: 10px;
 }
 
 .honor-date {
@@ -238,7 +236,6 @@ body {
   font-family: Manrope, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  margin-top: auto;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   color: #fff;
