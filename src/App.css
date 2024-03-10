@@ -189,8 +189,9 @@ body {
 }
 
 .honors-grid {
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .honor-card {
