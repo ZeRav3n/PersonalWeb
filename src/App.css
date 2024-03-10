@@ -189,9 +189,8 @@ body {
 }
 
 .honors-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
-  gap: 20px;
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
 }
 
 .honor-card {
@@ -205,6 +204,16 @@ body {
 
 .honor-card:hover {
   transform: scale(1.05);
+}
+
+.honors-description {
+  margin-bottom: 20px; /* Space between the description and the list */
+}
+
+.honor-description,
+.honor-date {
+  margin-bottom: 10px; /* Consistent margin for all text */
+  font-style: italic; /* Apply italic style to both */
 }
 
 .honor-title {
