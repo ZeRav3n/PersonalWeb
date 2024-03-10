@@ -173,6 +173,7 @@ body {
 
 .column {
   flex: 1;
+  text-align: justify;
 }
 
 .skills-list {
